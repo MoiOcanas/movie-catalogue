@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import './_variables.scss';
+@import './_navbar.scss';
+@import './movie-details';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background-color: #242627;
+  color: $secondary-color;
+  box-sizing: border-box;
+
+  .main-container {
+    margin-top: 45px;
+  }
+}
+
+.react-multi-carousel-list {
+  li {
+    padding: 10px 0px;
+  }
+
+  .carousel-image {
+    width: 200px;
+    border-radius: 1em;
+    box-shadow: 4px 4px 17.5px rgba(0, 0, 0, 0.2);
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .react-multi-carousel-list {
+    .carousel-image {
+      width: 280px;
+    }
+  }
+}
