@@ -1,125 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-@import './variables';
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import "./variables";
 
 .movie-container {
-  padding: 1rem;
-  margin-top: 50px;
+	padding: 1rem;
+	margin-top: 50px;
 }
 
 .movie-component {
-  box-shadow: 4px 4px 17.5px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  flex-wrap: wrap;
-  display: flex;
-  background-color: $primary-color;
+	box-shadow: $shadow-color;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	flex-wrap: wrap;
+	display: flex;
+	background-color: $primary-color;
 
-  .pc-section-1 {
-    padding: 0;
+	.pc-section {
+		flex-direction: column;
+		display: flex;
+		flex: 0 0 50%;
 
-    img {
-      width: 300px;
-    }
-  }
+		&-1 {
+			padding: 0;
 
- .pc-section-2 {
-    padding: 2rem 2rem;
-    flex-direction: column;
-    display: flex;
-    flex: 0 0 50%;
+			img {
+				width: 300px;
+			}
+		}
 
-    span {
-      padding: 0.5em;
-      margin: 0.3em;
-      color: $third-color;
-    }
-  }
+		&-2 {
+			padding: 2rem 2rem;
+			flex-direction: column;
+			display: flex;
+			flex: 0 0 50%;
 
-  .pc-rating {
-    margin-bottom: 10px;
-    span {
-      color: $secondary-color;
-    }
-  }
-  
- .pc-title {    
-    font-weight: 700;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: $third-color;
-  }
-  
- h3.pc-title {
-    font-size: 1.2em;
-  }
-  
- .pc-header h2.pc-title {
-    color: $third-color;
-    font-size: 1.5em;
-  }
-  
- .pc-header h3.pc-title {
-    color: hsl(71, 73%, 54%);
-  }
-  
- .pc-text {
-    font-size: 0.95em;
-  }
-  
- .pc-monthly-subscription {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-  }
-  
- .pc-monthly-subscription span:first-child {
-    margin-right: 1rem;
-    font-size: 2em;
-  }
-  
- .pc-monthly-subscription span:last-child {
-    color: hsl(204, 43%, 85%);
-  }
-  
- .pc-list li {
-    color: hsl(204, 43%, 90%);
-    font-size: 0.85em;
-  }
+			span {
+				padding: 0.5em;
+				margin: 0.3em;
+				color: $third-color;
+			}
+
+			.pc-rating {
+				margin-bottom: 10px;
+				span {
+					color: $secondary-color;
+				}
+			}
+
+			.pc-title {
+				font-weight: 700;
+				font-family: "Roboto Condensed", sans-serif;
+				color: $third-color;
+      }
+      
+      .pc-header h2.pc-title {
+        color: $third-color;
+        font-size: 1.5em;
+      }
+		}
+	}
 }
 
-@mixin flex-side {
-    flex-direction: column;
-    display: flex;
-    flex: 0 0 50%;
-}
-
-
-@media only screen and (max-width: 600px) {
-
+@media (min-width: 768px) and (max-width: 1023px) {
   .movie-component {
-    .movie-component .pc-section {
-      flex: 0 0 100%;
-    }
-  
-    .movie-component .pc-button {
-      margin-top: 2rem;
-    }
-
     .pc-section-1 {
       img {
-        width: 100%;
+        width: 325px;
       }
-    }
-
-    .pc-section-2 {
-      padding: 1em;
-      flex: 0 0 100%;
-    }
-  }
-
-  .pc-section-1 {
-    img {
-      width: 100%;
     }
   }
 }
-  
+
+@media only screen and (max-width: 600px) {
+	.movie-component {
+		.movie-component .pc-section {
+			flex: 0 0 100%;
+		}
+
+		.pc-section-1 {
+			img {
+				width: 100%;
+			}
+		}
+
+		.pc-section-2 {
+			padding: 1em;
+			flex: 0 0 100%;
+		}
+	}
+}

@@ -2,6 +2,7 @@
 @import './_variables.scss';
 @import './_navbar.scss';
 @import './movie-details';
+@import './_mixins';
 
 body {
   margin: 0;
@@ -16,6 +17,29 @@ body {
   }
 }
 
+.search-input-text {
+  border: 0;
+  border-radius: 0.3em;
+  width: 50%;
+  padding: 6px 10px;
+  background: $secondary-color;
+}
+
+.search-result-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
+  .search-result-item {
+    padding: 10px;
+    position: relative;
+    img {
+      width: 200px;
+      border-radius: 1em;
+      box-shadow: 4px 4px 17.5px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
 .react-multi-carousel-list {
   li {
     padding: 10px 0px;
@@ -24,7 +48,7 @@ body {
   .carousel-image {
     width: 200px;
     border-radius: 1em;
-    box-shadow: 4px 4px 17.5px rgba(0, 0, 0, 0.2);
+    box-shadow: $shadow-color;
   
     &:hover {
       cursor: pointer;
@@ -32,10 +56,38 @@ body {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@include mediaSm {
+  .search-result-container {
+    grid-template-columns: auto;
+  }
+
   .react-multi-carousel-list {
     .carousel-image {
       width: 280px;
     }
+  }
+
+  body {
+    .search-input-text {
+      width: 90%;
+  }
+}
+}
+
+@include mediaMd {
+  .search-result-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@include mediaLg {
+  .search-result-container {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@include mediaXl {
+  .search-result-container {
+    grid-template-columns: auto auto auto auto auto;
   }
 }
