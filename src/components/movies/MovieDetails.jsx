@@ -25,7 +25,7 @@ class MovieDetails extends Component {
     render() {
         const { movie } = this.state;
         return (
-            <main className="movie-container">
+            <main className="container movie-container">
                 <article className="movie-component is-centered">
                     <section className="pc-section-1">
                         <img src={imgURL + movie.poster_path} alt="alt" />

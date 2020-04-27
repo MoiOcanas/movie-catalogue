@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery';
 
 class Navbar extends Component {
-
     componentDidMount = () => {
         $("#search-icon").click(function () {
             $(".nav").toggleClass("search");
@@ -22,10 +21,10 @@ class Navbar extends Component {
             <div className="nav-wrapper">
                 <div className="grad-bar"></div>
                 <nav className="navbar">
-                    <span>
-                        <b>MOVIE APP</b>
+                    <Link to="/">
+                        <span>MOVIE APP</span>
                         <i className="fa fa-ticket" aria-hidden="true"></i>
-                    </span>
+                    </Link>
                     <div className="menu-toggle" id="mobile-menu">
                         <span className="bar"></span>
                         <span className="bar"></span>
