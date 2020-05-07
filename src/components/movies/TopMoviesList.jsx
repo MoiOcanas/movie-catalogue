@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { responsive } from '../../responsive';
@@ -8,25 +6,17 @@ import { responsive } from '../../responsive';
 //Components
 import MovieItem from './MovieItem';
 
+//Redux
+import { connect } from 'react-redux';
+import { getTopMovies } from '../../store/actions/moviesActions';
+
 class TopMoviesList extends Component {
-    state = {
-        topMoviesList: []
-    }
-
     componentDidMount = () => {
-        this.getMovies();
-    }
-
-    getMovies = () => {
-        let apiKey = '26b6f99577e56d992ffe47051578e1ac';
-        axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=2`)
-            .then(res => {
-                this.setState({ topMoviesList: res.data.results });
-            })
+        this.props.getTopMovies();
     }
 
     render() {
-        const { topMoviesList } = this.state;
+        const { topMovies } = this.props;
         return (
             <div>
                 <h2><b>Top Ranked Movies</b></h2>
@@ -52,7 +42,7 @@ class TopMoviesList extends Component {
                     renderButtonGroupOutside={false}
                     renderDotsOutside={false}
                 >
-                    {topMoviesList && topMoviesList.map(movie => {
+                    {topMovies && topMovies.map(movie => {
                         return (
                             <MovieItem key={movie.id} movie={movie} />
                         )
@@ -63,4 +53,11 @@ class TopMoviesList extends Component {
     }
 }
 
-export default TopMoviesList;
+const mapStateToProps = state => {
+    const { topMovies } = state.movies;
+    return {
+        topMovies
+    }
+}
+
+export default connect(mapStateToProps, { getTopMovies })(TopMoviesList);

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { responsive } from '../../responsive';
@@ -8,26 +6,17 @@ import { responsive } from '../../responsive';
 //Components
 import MovieItem from './MovieItem';
 
+//Redux
+import { connect } from 'react-redux';
+import { getUpcomingMovies } from '../../store/actions/moviesActions';
+
 class UpcomingMoviesList extends Component {
-    state = {
-        upcomingMovies: []
-    }
-
     componentDidMount = () => {
-        this.getMovies();
-    }
-
-    getMovies = () => {
-        let apiKey = '26b6f99577e56d992ffe47051578e1ac';
-        axios.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`)
-            .then(res => {
-                this.setState({ upcomingMovies: res.data.results });
-            })
+        this.props.getUpcomingMovies();
     }
 
     render() {
-        const { upcomingMovies } = this.state;
-
+        const { upcomingMovies } = this.props;
         return (
             <div>
                 <h2><b>Upcoming Movies</b></h2>
@@ -64,4 +53,11 @@ class UpcomingMoviesList extends Component {
     }
 }
 
-export default UpcomingMoviesList;
+const mapStateToProps = state => {
+    const { upcomingMovies } = state.movies;
+    return {
+        upcomingMovies
+    }
+}
+
+export default connect(mapStateToProps, { getUpcomingMovies })(UpcomingMoviesList);

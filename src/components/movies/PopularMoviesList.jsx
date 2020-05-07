@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { responsive } from '../../responsive';
@@ -8,25 +6,18 @@ import { responsive } from '../../responsive';
 //Components
 import MovieItem from './MovieItem';
 
+//Redux
+import { connect } from 'react-redux';
+import { getPopularMovies } from '../../store/actions/moviesActions';
+
 class PopularMoviesList extends Component {
-    state = {
-        popularMoviesList: []
-    }
 
     componentDidMount = () => {
-        this.getMovies();
-    }
-
-    getMovies = () => {
-        let apiKey = '26b6f99577e56d992ffe47051578e1ac';
-        axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`)
-            .then(res => {
-                this.setState({ popularMoviesList: res.data.results });
-            })
+        this.props.getPopularMovies();
     }
 
     render() {
-        const { popularMoviesList } = this.state;
+        const { popularMovies } = this.props;
 
         return (
             <div>
@@ -53,7 +44,7 @@ class PopularMoviesList extends Component {
                     renderButtonGroupOutside={false}
                     renderDotsOutside={false}
                 >
-                    {popularMoviesList && popularMoviesList.map(movie => {
+                    {popularMovies && popularMovies.map(movie => {
                         return (
                             <MovieItem key={movie.id} movie={movie} />
                         )
@@ -64,4 +55,11 @@ class PopularMoviesList extends Component {
     }
 }
 
-export default PopularMoviesList;
+const mapStateToProps = state => {
+    const { popularMovies } = state.movies;
+    return {
+        popularMovies
+    }
+}
+
+export default connect(mapStateToProps, { getPopularMovies })(PopularMoviesList);

@@ -28,9 +28,8 @@ class SearchMovie extends Component {
 
     render() {
         const { resultMovies } = this.state; 
-        console.log(resultMovies)
         return (
-            <div>
+            <div className="container">
                 <div className="text-center">
                     <br />
                     <h4>Search a movie</h4>
