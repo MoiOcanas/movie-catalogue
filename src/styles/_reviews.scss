@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import "./variables";
 @import "./mixins";
 
@@ -27,7 +26,13 @@
 }
 
 @include mediaSm {
+    .review-container {
+        padding: 1rem;
+    }
+
 	.review-component {
+        padding: 1rem;
+        word-break: break-word;
         p {
             font-size: 0.8em;
         }

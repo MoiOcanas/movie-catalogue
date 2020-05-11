@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
 @import "./_variables.scss";
 @import "./_navbar.scss";
 @import "./movie-details";
@@ -19,7 +20,7 @@ body {
 	}
 
 	h1 {
-		font-size: 3rem !important;
+		font-size: 3rem;
 	}
 
 	.main-carousel-container {
@@ -33,21 +34,6 @@ body {
 		&:hover {
 			text-decoration: underline;
 		}
-	}
-}
-
-.paragraph-content {
-	overflow: hidden;
-	line-height: 1.2em;
-	height: 5em;
-
-	&.collapsed {
-		overflow: hidden;
-	}
-	&.expanded {
-		overflow: visible;
-		height: auto;
-		margin-bottom: 1em;
 	}
 }
 
@@ -94,7 +80,7 @@ body {
 			top: 40%;
 
 			h1 {
-				font-family: "Roboto Condensed", sans-serif;
+				font-family: 'Noto Sans JP', sans-serif;
 				color: $fourth-color;
 			}
 
@@ -111,7 +97,7 @@ body {
 
 				&:hover {
 					text-decoration: none;
-					border: 2px solid $fourth-color;
+					background-color: darken($fourth-color, 10%);
 				}
 			}
 		}
@@ -160,6 +146,7 @@ body {
 	}
 
 	.main-element-container {
+		height: auto;
 		.top-right {
 			text-align: center;
 			width: 100%;
@@ -168,10 +155,13 @@ body {
 			.top-right-container {
 				right: 10%;
 				h1 {
-					font-size: 1.5rem !important;
+					font-size: 1.2rem !important;
 					margin-bottom: 10px;
 				}
-
+				a {
+					padding: 4px 14px;
+					font-size: 0.8em;
+				}
 				p {
 					display: none;
 				}
@@ -191,8 +181,14 @@ body {
 			height: 100%;
 			.top-right-container {
 				top: 25%;
+				p {
+					padding: 0px 40px;
+					font-size: 0.7em;
+				}
+
 				h1 {
 					padding-bottom: 8px;
+					font-size: 1.8em;
 				}
 
 				a {

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import "./variables";
 @import "./mixins";
 
@@ -38,7 +37,7 @@
 			span {
 				padding: 0.5em;
 				margin: 0.3em;
-				color: $third-color;
+				color: $fourth-color;
 			}
 
 			.pc-rating {
@@ -50,8 +49,8 @@
 
 			.pc-title {
 				font-weight: 700;
-				font-family: "Roboto Condensed", sans-serif;
-				color: $third-color;
+				font-family: 'Noto Sans JP', sans-serif;
+				color: $fourth-color;
       }
       
       .pc-header h2.pc-title {
@@ -62,7 +61,7 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@include mediaMd {
   .movie-component {
     .pc-section-1 {
       img {
@@ -89,8 +88,12 @@
 		}
 
 		.pc-section-2 {
-			padding: 1em;
+			padding: 1rem;
 			flex: 0 0 100%;
+
+			p {
+				font-size: 0.8em;
+			}
 		}
 	}
 }

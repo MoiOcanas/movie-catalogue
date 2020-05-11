@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import './mixins';
 @import './keyframes';
 
@@ -26,6 +27,10 @@
 	align-items: center;
 	overflow: hidden;
 	padding: 14px 10px;
+
+	#app-brand {
+		font-family: 'Archivo Black', sans-serif;
+	}
 
 	a {
 		color: $secondary-color;
@@ -154,7 +159,7 @@
 				li {
 					padding: 15px;
 					&:first-child {
-						margin-top: 50px;
+						margin-top: 20px;
 					}
 		
 					a {

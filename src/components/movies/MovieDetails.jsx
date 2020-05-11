@@ -12,10 +12,6 @@ let imgURL = 'https://image.tmdb.org/t/p/w500';
 
 class MovieDetails extends Component {
 
-    state = {
-        expanded: false
-    }
-
     componentDidMount = () => {
         window.scrollTo(0, 0);
         const id = this.props.match.params.id;
@@ -25,8 +21,6 @@ class MovieDetails extends Component {
 
     render() {
         const { movie, movieReviews } = this.props;
-        const { expanded } = this.state;
-        const toggledClass = expanded ? 'expanded' : 'collapsed';
 
         return (
             <div className="container" ref={this.scrollRef} >
@@ -41,10 +35,7 @@ class MovieDetails extends Component {
                                 <i className="fa fa-star" aria-hidden="true"></i>
                                 <span>{movie.vote_average}</span>
                             </div>
-                            <div className={`paragraph-content ${toggledClass}`}>{movie.overview}</div>
-                            <span className="read-more" onClick={() => this.setState({ expanded: !expanded })}>
-                                {expanded ? 'View Less' : 'View More'}
-                            </span>
+                            <p>{movie.overview}</p>
                             <small>Duration: {movie.runtime + "min"}</small>
                             <small>
                                 Production companies:
