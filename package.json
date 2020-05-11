@@ -1,6 +1,6 @@
 {
   "name": "movies-app",
-  "homepage": "http://moiocanas.github.io/movie-cataloge",
+  "homepage": "http://moiocanas.github.io/movie-cataloge/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
