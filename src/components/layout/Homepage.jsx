@@ -13,7 +13,7 @@ let imgURL = 'https://image.tmdb.org/t/p/original';
 
 const Homepage = () => {
 
-    const upcomingMovies = useSelector(state => state.movies.upcomingMovies);
+    const upcomingMovies = useSelector(state => state.moviesReducer.upcomingMovies);
     const dispatch = useDispatch();
     useEffect(() => { 
         dispatch(moviesActions.getUpcomingMovies()); 

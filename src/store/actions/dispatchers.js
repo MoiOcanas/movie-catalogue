@@ -6,47 +6,51 @@ import {
     GET_UPCOMING_MOVIES
 } from "./actionTypes";
 
-export const getPopularMoviesSuccess = popularMovies => {
-    return {
-        type: GET_POPULAR_MOVIES,
-        payload: {
-            popularMovies
-        }
-    };
+const movieDispatchers = {
+    getPopularMoviesSuccess: popularMovies => {
+        return {
+            type: GET_POPULAR_MOVIES,
+            payload: {
+                popularMovies
+            }
+        };
+    },
+    
+     getMovieSuccess: movie => {
+        return {
+            type: GET_MOVIE,
+            payload: {
+               movie
+            }
+        };
+    },
+    
+     getTopMoviesSuccess: topMovies => {
+        return {
+            type: GET_TOP_MOVIES,
+            payload: {
+                topMovies
+            }
+        };
+    },
+    
+     getMoviesReviewsSuccess: movieReviews => {
+        return {
+            type: GET_MOVIE_REVIEWS,
+            payload: {
+                movieReviews
+            }
+        };
+    },
+    
+     getUpcomingMoviesSuccess: upcomingMovies => {
+        return {
+            type: GET_UPCOMING_MOVIES,
+            payload: {
+                upcomingMovies
+            }
+        };
+    }
 };
 
-export const getMovieSuccess = movie => {
-    return {
-        type: GET_MOVIE,
-        payload: {
-           movie
-        }
-    };
-};
-
-export const getTopMoviesSuccess = topMovies => {
-    return {
-        type: GET_TOP_MOVIES,
-        payload: {
-            topMovies
-        }
-    };
-};
-
-export const getMoviesReviewsSuccess = movieReviews => {
-    return {
-        type: GET_MOVIE_REVIEWS,
-        payload: {
-            movieReviews
-        }
-    };
-};
-
-export const getUpcomingMoviesSuccess = upcomingMovies => {
-    return {
-        type: GET_UPCOMING_MOVIES,
-        payload: {
-            upcomingMovies
-        }
-    };
-};
+export default movieDispatchers;

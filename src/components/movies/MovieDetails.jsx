@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react';
-
 //delayde - north fell
-//Components
-import MovieReviewsList from './MovieReviewsList';
-
-//Redux
 import { useDispatch, useSelector } from 'react-redux';
+import MovieReviewsList from './MovieReviewsList';
 import moviesActions from '../../store/actions/moviesActions';
 
 let imgURL = 'https://image.tmdb.org/t/p/w500';
@@ -13,8 +9,8 @@ let imgURL = 'https://image.tmdb.org/t/p/w500';
 const MovieDetails = props => {
 
     const { movie, movieReviews } = useSelector(state => ({
-        movie: state.movies.movie,
-        movieReviews: state.movies.movieReviews
+        movie: state.moviesReducer.movie,
+        movieReviews: state.moviesReducer.movieReviews
     }));
 
     const dispatch = useDispatch();

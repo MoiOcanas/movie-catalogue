@@ -7,7 +7,7 @@ import { responsive } from '../../responsive';
 
 const TopMoviesList = () => {
 
-    const topMovies = useSelector(state => state.movies.topMovies);
+    const topMovies = useSelector(state => state.moviesReducer.topMovies);
     const dispatch = useDispatch();
     useEffect(() => { 
         dispatch(moviesActions.getTopMovies()); 

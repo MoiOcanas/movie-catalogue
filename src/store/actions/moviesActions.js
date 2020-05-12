@@ -1,11 +1,5 @@
 import axios from 'axios';
-import {
-    getPopularMoviesSuccess,
-    getMovieSuccess,
-    getTopMoviesSuccess,
-    getUpcomingMoviesSuccess,
-    getMoviesReviewsSuccess
-} from './dispatchers';
+import movieDispatchers from './dispatchers';
 
 const url = "https://api.themoviedb.org/3/movie/";
 const apiKey = '26b6f99577e56d992ffe47051578e1ac';
@@ -16,7 +10,7 @@ const moviesActions = {
             await axios.get(`${url}popular?api_key=${apiKey}&language=en-US&page=1`)
                 .then(res => {
                     let popularMovies = res.data.results;
-                    dispatch(getPopularMoviesSuccess(popularMovies));
+                    dispatch(movieDispatchers.getPopularMoviesSuccess(popularMovies));
                 })
                 .catch(err => {
                     console.log(err)
@@ -29,7 +23,7 @@ const moviesActions = {
             await axios.get(`${url}top_rated?api_key=${apiKey}&language=en-US&page=1`)
                 .then(res => {
                     let topMovies = res.data.results;
-                    dispatch(getTopMoviesSuccess(topMovies));
+                    dispatch(movieDispatchers.getTopMoviesSuccess(topMovies));
                 })
                 .catch(err => {
                     console.log(err)
@@ -42,7 +36,7 @@ const moviesActions = {
             await axios.get(`${url}upcoming?api_key=${apiKey}&language=en-US&page=1`)
                 .then(res => {
                     let upcomingMovies = res.data.results;
-                    dispatch(getUpcomingMoviesSuccess(upcomingMovies));
+                    dispatch(movieDispatchers.getUpcomingMoviesSuccess(upcomingMovies));
                 })
                 .catch(err => {
                     console.log(err)
@@ -55,7 +49,7 @@ const moviesActions = {
             await axios.get(`${url}${id}?api_key=${apiKey}&language=en-US`)
                 .then(res => {
                     let movie = res.data;
-                    dispatch(getMovieSuccess(movie));
+                    dispatch(movieDispatchers.getMovieSuccess(movie));
                 })
                 .catch(err => {
                     console.log(err)
@@ -68,7 +62,7 @@ const moviesActions = {
             await axios.get(`${url}${id}/reviews?api_key=${apiKey}&language=en-US&page=1`)
                 .then(res => {
                     let moviesReviews = res.data.results;
-                    dispatch(getMoviesReviewsSuccess(moviesReviews));
+                    dispatch(movieDispatchers.getMoviesReviewsSuccess(moviesReviews));
                 })
                 .catch(err => {
                     console.log(err)

@@ -7,7 +7,7 @@ import { responsive } from '../../responsive';
 
 const PopularMoviesList = () => {
 
-    const popularMovies = useSelector(state => state.movies.popularMovies);
+    const popularMovies = useSelector(state => state.moviesReducer.popularMovies);
     const dispatch = useDispatch();
     useEffect(() => { 
         dispatch(moviesActions.getPopularMovies()); 
