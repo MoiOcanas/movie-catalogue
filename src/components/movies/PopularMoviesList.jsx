@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPopularMovies } from '../../store/actions/moviesActions';
+import moviesActions from '../../store/actions/moviesActions';
 import MovieItem from './MovieItem';
 import MoviesCarousel from './MoviesCarousel';
 import { responsive } from '../../responsive';
@@ -10,7 +10,7 @@ const PopularMoviesList = () => {
     const popularMovies = useSelector(state => state.movies.popularMovies);
     const dispatch = useDispatch();
     useEffect(() => { 
-        dispatch(getPopularMovies()); 
+        dispatch(moviesActions.getPopularMovies()); 
     }, [dispatch]);
 
     return (

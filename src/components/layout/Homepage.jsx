@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MoviesCarousel from '../movies/MoviesCarousel';
 import { mainResponsive } from '../../mainResponsive';
-import { getUpcomingMovies } from '../../store/actions/moviesActions';
+import moviesActions from '../../store/actions/moviesActions';
 import { useDispatch, useSelector } from 'react-redux';
 
 //Components
@@ -16,7 +16,7 @@ const Homepage = () => {
     const upcomingMovies = useSelector(state => state.movies.upcomingMovies);
     const dispatch = useDispatch();
     useEffect(() => { 
-        dispatch(getUpcomingMovies()); 
+        dispatch(moviesActions.getUpcomingMovies()); 
     }, [dispatch]);
 
     return (

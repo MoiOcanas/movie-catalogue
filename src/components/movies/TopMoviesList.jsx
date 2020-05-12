@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTopMovies } from '../../store/actions/moviesActions';
+import moviesActions from '../../store/actions/moviesActions';
 import MoviesCarousel from './MoviesCarousel';
 import MovieItem from './MovieItem';
 import { responsive } from '../../responsive';
@@ -10,7 +10,7 @@ const TopMoviesList = () => {
     const topMovies = useSelector(state => state.movies.topMovies);
     const dispatch = useDispatch();
     useEffect(() => { 
-        dispatch(getTopMovies()); 
+        dispatch(moviesActions.getTopMovies()); 
     }, [dispatch]);
 
     return (
