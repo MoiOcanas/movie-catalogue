@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="nav-wrapper">
             <div className="grad-bar"></div>
             <nav className="navbar">
-                <Link to="/">
+                <Link to="/movie-catalogue/">
                     <span id="app-brand">MOVIE APP</span>
                     <i className="fa fa-ticket" aria-hidden="true"></i>
                 </Link>
@@ -28,9 +28,9 @@ const Navbar = () => {
                     <span className="bar"></span>
                 </div>
                 <ul className={`nav ${expandedClass} no-search`}>
-                    <li className="nav-item" onClick={handleClick}><Link to="/">Home</Link></li>
-                    <li className="nav-item" onClick={handleClick}><Link to="/about">About</Link></li>
-                    <li className="nav-item" onClick={handleClick}><Link to="/search">Search</Link></li>
+                    <li className="nav-item" onClick={handleClick}><Link to="/movie-catalogue/">Home</Link></li>
+                    <li className="nav-item" onClick={handleClick}><Link to="/movie-catalogue/about">About</Link></li>
+                    <li className="nav-item" onClick={handleClick}><Link to="/movie-catalogue/search">Search</Link></li>
                 </ul>
             </nav>
         </div>

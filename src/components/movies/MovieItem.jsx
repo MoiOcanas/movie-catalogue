@@ -6,7 +6,7 @@ let imgURL = 'https://image.tmdb.org/t/p/w500';
 const MovieItem = ({ movie }) => {
     return (
         <div style={{ textAlign: 'center' }}>
-            <Link to={`/movie/${movie.id}`}>
+            <Link to={`/movie-catalogue/${movie.id}`}>
                 <img className="carousel-image" src={`${imgURL}${movie.poster_path}`} alt={movie.title} />
             </Link>
         </div>

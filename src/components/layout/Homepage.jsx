@@ -31,7 +31,7 @@ const Homepage = () => {
                                     <h1>{movie.title}</h1>
                                     <p>{movie.overview}</p>
                                     <div className="text-center">
-                                        <Link to={`/movie/${movie.id}`}>
+                                        <Link to={`/movie-catalogue/${movie.id}`}>
                                             See details
                                             </Link>
                                     </div>
