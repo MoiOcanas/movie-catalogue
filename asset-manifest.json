@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/movie-catalogue/static/css/main.f53ff103.chunk.css",
-    "main.js": "/movie-catalogue/static/js/main.21b69eaa.chunk.js",
-    "main.js.map": "/movie-catalogue/static/js/main.21b69eaa.chunk.js.map",
+    "main.css": "/movie-catalogue/static/css/main.82f5693e.chunk.css",
+    "main.js": "/movie-catalogue/static/js/main.e61e88c4.chunk.js",
+    "main.js.map": "/movie-catalogue/static/js/main.e61e88c4.chunk.js.map",
     "runtime-main.js": "/movie-catalogue/static/js/runtime-main.1c1f5e81.js",
     "runtime-main.js.map": "/movie-catalogue/static/js/runtime-main.1c1f5e81.js.map",
     "static/css/2.30066a0d.chunk.css": "/movie-catalogue/static/css/2.30066a0d.chunk.css",
-    "static/js/2.c6b357d7.chunk.js": "/movie-catalogue/static/js/2.c6b357d7.chunk.js",
-    "static/js/2.c6b357d7.chunk.js.map": "/movie-catalogue/static/js/2.c6b357d7.chunk.js.map",
+    "static/js/2.7b8525d5.chunk.js": "/movie-catalogue/static/js/2.7b8525d5.chunk.js",
+    "static/js/2.7b8525d5.chunk.js.map": "/movie-catalogue/static/js/2.7b8525d5.chunk.js.map",
     "index.html": "/movie-catalogue/index.html",
-    "precache-manifest.2a9916f0e131d03546ce9bfc35fd4607.js": "/movie-catalogue/precache-manifest.2a9916f0e131d03546ce9bfc35fd4607.js",
+    "precache-manifest.66bdf81d84399f950c20e367ef6586ef.js": "/movie-catalogue/precache-manifest.66bdf81d84399f950c20e367ef6586ef.js",
     "service-worker.js": "/movie-catalogue/service-worker.js",
     "static/css/2.30066a0d.chunk.css.map": "/movie-catalogue/static/css/2.30066a0d.chunk.css.map",
-    "static/css/main.f53ff103.chunk.css.map": "/movie-catalogue/static/css/main.f53ff103.chunk.css.map",
-    "static/js/2.c6b357d7.chunk.js.LICENSE": "/movie-catalogue/static/js/2.c6b357d7.chunk.js.LICENSE",
+    "static/css/main.82f5693e.chunk.css.map": "/movie-catalogue/static/css/main.82f5693e.chunk.css.map",
+    "static/js/2.7b8525d5.chunk.js.LICENSE": "/movie-catalogue/static/js/2.7b8525d5.chunk.js.LICENSE",
     "static/media/styles.css": "/movie-catalogue/static/media/revicons.2feb69cc.eot"
   },
   "entrypoints": [
     "static/js/runtime-main.1c1f5e81.js",
     "static/css/2.30066a0d.chunk.css",
-    "static/js/2.c6b357d7.chunk.js",
-    "static/css/main.f53ff103.chunk.css",
-    "static/js/main.21b69eaa.chunk.js"
+    "static/js/2.7b8525d5.chunk.js",
+    "static/css/main.82f5693e.chunk.css",
+    "static/js/main.e61e88c4.chunk.js"
   ]
 }
