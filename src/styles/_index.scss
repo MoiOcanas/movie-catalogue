@@ -4,8 +4,9 @@
 
 @import "./_variables.scss";
 @import "./_navbar.scss";
-@import "./movie-details";
-@import "./reviews";
+@import "./_movie-details";
+@import "./_about";
+@import "./_reviews";
 @import "./_mixins";
 
 body {

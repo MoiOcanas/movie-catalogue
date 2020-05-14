@@ -29,8 +29,8 @@ const Navbar = () => {
                 </div>
                 <ul className={`nav ${expandedClass} no-search`}>
                     <li className="nav-item" onClick={handleClick}><Link to="/movie-catalogue/">Home</Link></li>
-                    <li className="nav-item" onClick={handleClick}><Link to="/movie-catalogue/about">About</Link></li>
-                    <li className="nav-item" onClick={handleClick}><Link to="/movie-catalogue/search">Search</Link></li>
+                    <li className="nav-item" onClick={handleClick}><Link to="/about">About</Link></li>
+                    <li className="nav-item" onClick={handleClick}><Link to="/search">Search</Link></li>
                 </ul>
             </nav>
         </div>

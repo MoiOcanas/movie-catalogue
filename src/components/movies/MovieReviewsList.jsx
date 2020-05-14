@@ -4,7 +4,6 @@ import React from 'react';
 import MovieReviewItem from './MovieReviewItem';
 
 const MovieReviewsList = ({ movieReviews }) => {
-    console.log(movieReviews)
     return (
         <div className="review-container" >
             {movieReviews && (
