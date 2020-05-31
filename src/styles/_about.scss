@@ -2,23 +2,23 @@
 @import "./mixins";
 
 .about-page-container {
-    padding: 1rem;
-	margin-top: 20px;
+  padding: 1rem;
+  margin-top: 20px;
 }
 
 .about-page-component {
-    box-shadow: $shadow-color;
-	border-radius: 1.5rem;
-	overflow: hidden;
-	flex-wrap: wrap;
-	margin: 0 auto;
-    display: flex;
-    padding: 2rem 2rem;
-    background-color: $primary-color;
-    
-    h2 {
-        font-weight: 700;
-        font-family: 'Francois One', sans-serif;
-        color: $fourth-color;
-    }
+  box-shadow: $shadow-color;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  padding: 2rem 2rem;
+  background-color: $primary-color;
+
+  h2 {
+    font-weight: 700;
+    font-family: "Francois One", sans-serif;
+    color: $fourth-color;
+  }
 }
